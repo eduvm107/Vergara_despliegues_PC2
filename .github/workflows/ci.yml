@@ -12,10 +12,10 @@ jobs:
       ALUMNO: ${{ github.actor }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -27,8 +27,8 @@ jobs:
 
       - name: Notificar éxito a Slack
         if: success()
-        run: node notificar.mjs exito "PR #${{ github.event.pull_request.number }} (${{ github.head_ref }})"
+        run: node notificar.mjs exito "PR ${{ github.event.pull_request.number }} (${{ github.head_ref }})"
 
       - name: Notificar error a Slack
         if: failure()
-        run: node notificar.mjs error "PR #${{ github.event.pull_request.number }} (${{ github.head_ref }})"
+        run: node notificar.mjs error "PR ${{ github.event.pull_request.number }} (${{ github.head_ref }})"
