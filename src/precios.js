@@ -21,9 +21,10 @@ function subtotal(items) {
 }
 
 function aplicarCupon(monto, cupon) {
-  const descuento = CUPONES[cupon]
+  const codigo = String(cupon || '').trim().toUpperCase()
+  const descuento = CUPONES[codigo]
   if (descuento === undefined) return monto
-  return monto * (1 + descuento)
+  return monto * (1 - descuento)
 }
 
 function calcularTotal(items, cupon) {
