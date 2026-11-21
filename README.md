@@ -10,3 +10,8 @@ API de ejemplo sin dependencias. Requiere Node.js 20 o superior.
 
 Rutas actuales: `/productos` y `/total?ids=1,2&cupon=DESC10`.
 Las instrucciones de la práctica están en el enunciado de la PC02.
+
+## Despliegue
+
+- Plataforma: Render
+- URL: https://tienda-api-vergara.onrender.com (salud: `/health`)
