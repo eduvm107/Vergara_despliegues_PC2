@@ -9,5 +9,8 @@
     "test:cov": "node --test --experimental-test-coverage",
     "pipeline": "npm test && node notificar.mjs exito || node notificar.mjs error"
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  }
 }
