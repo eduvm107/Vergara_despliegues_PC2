@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "node --test",
-    "test:cov": "node --test --experimental-test-coverage"
+    "test:cov": "node --test --experimental-test-coverage",
+    "pipeline": "npm test && node notificar.mjs exito || node notificar.mjs error"
   },
   "license": "UNLICENSED"
 }
